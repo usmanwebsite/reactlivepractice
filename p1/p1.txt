@@ -1,0 +1,119 @@
+          // Practice of react
+ import React  from 'react';
+import ReactDOM from 'react-dom';
+import "./index.css"; 
+/*
+ReactDOM.render(
+  <>
+  <h1>Pakistan Favourate Netflix Series</h1>
+  <p>There is the five famous netflix series are as follow.</p>
+  <ol>
+    <li>Firefly Lane: Season 2. ...</li>
+    <li>The Crown: Season 5. ...</li>
+    <li>Crime Scene: The Texas Killing Fields: Limited Series. ...</li>
+    <li>Dead to Me: Season 3. ...</li>
+    <li>Manifest: Season 4. ...</li>
+  </ol>
+  </>,
+  document.getElementById("root")
+);  */
+
+const name = "Usman";
+const age = "21";
+const age2= "5";
+var ab= "okk";
+const ex = "Usman";
+const current_Date = new Date().toLocaleDateString();
+const time =new Date().toLocaleTimeString();
+
+ 
+  const styling = {
+
+    color : 'blue',
+    textAlign : 'center',
+    textTransform : 'Capitalize'
+  };
+
+
+  let curDate= new Date();
+  curDate= curDate.getHours();
+  let show= "";
+   const display={};
+  if(curDate>1 && curDate<12){
+    show="Good Morning";
+  }
+  else if(curDate>13 && curDate<18){
+    show= "Good AfterNoon";
+    display.color = 'red';
+  }
+  else{
+    show="Good Night";
+    display.color = 'green';
+    display.textDecoration = 'underline';
+  }
+
+  
+ReactDOM.render(
+  
+ /*  Expression
+  <>
+   <h1>My name is {ex}</h1>
+   <p>The current Date is {current_Date}</p>
+   <p>The table of 2 is {2**12}</p>
+  </>, */
+
+
+  // Template Literals
+  /* <>
+  
+    <h1>{`My First name is ${name} my age is ${age * 5}`}</h1>
+    <h2>I am working in web developing for {age2} year. And the experences is good {ab}</h2>
+
+  </>, */
+
+  /*
+  <>
+   <h1>The name is {ex}.</h1>
+   <p>The current Date is {current_Date}</p>
+   <p>The current Time is {time}</p>
+   <b>My age is {age}.</b>
+  </>, */
+ <>
+ <h1 className='heading' >I Upload a image</h1>
+ <div className='img_sd'> 
+ <a href="www.youtube.com" target="_gj">
+ <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyoEdHa6Zbf73r4B5_-EoJRVmwv-OqmT8Zrw&usqp=CAU" alt="M4-223bore"></img>
+ </a>
+ </div>
+
+ <div>
+   <h5 style={ {
+
+color : 'blue',
+textAlign : 'center',
+textTransform : 'Capitalize',
+marginTop : '10px',
+justifyContent : 'left',
+display : 'flex'
+}}>"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."</h5>
+ </div>
+
+
+
+ <div className='center'>  
+  <h1 style={{color : 'purple' }}>Hello Sir <span style={display}>{show}</span> </h1>
+</div>
+
+
+ </>,
+
+document.getElementById("root")
+
+);
+
+
+
+/*
+var h1= document.createElement("h1");
+h1.innerHTML = "hello World";
+document.getElementById("root").appendChild(h1);*/
